@@ -15,7 +15,7 @@ class Player
       else
         warrior.walk!
       end
-    elsif !warrior.feel.empty? && taking_damage?
+    elsif warrior.feel.enemy?
       warrior.attack!
     elsif !warrior.feel.empty? && !taking_damage?
       if has_low_health?
